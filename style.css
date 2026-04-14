@@ -1,9 +1,13 @@
 /* GLOBAL */
+/* BACKGROUND GRADIENT (premium) */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0a0f1c, #020617);
   color: white;
+  background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.35), transparent 40%),
+  radial-gradient(circle at 80% 30%, rgba(236, 72, 153, 0.3), transparent 40%),
+  radial-gradient(circle at 50% 80%, rgba(30, 144, 255, 0.3), transparent 40%),
+  #020617;
 }
 
 /* NAVBAR */
@@ -73,11 +77,11 @@ nav a:hover::after {
   font-weight: 700;
 }
 
-/* NAME GRADIENT */
+/* NAME */
 .name {
-  background: linear-gradient(90deg, #60a5fa, #a78bfa, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e2e8f0;
+  font-size: 52px;   
+  font-weight: 700;
 }
 
 /* BUTTON */
@@ -178,8 +182,19 @@ nav a:hover::after {
 
 /* IMAGE */
 .hero-img img {
-  width: 230px;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 3px solid rgba(30, 144, 255, 0.4);
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+  transition: 0.3s;
+}
+
+/* hover effect */
+.hero-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(30, 144, 255, 0.6);
 }
 
 /* SECTION SPACING (FIXED) */
@@ -295,4 +310,13 @@ h2::after {
 /* CONTACT */
 #contact p {
   margin-bottom: 8px;
+}
+
+#contact a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
